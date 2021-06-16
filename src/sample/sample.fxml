@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar fx:id="mBMenue">
+                    <menus>
+                        <Menu fx:id="menueFitxer" mnemonicParsing="false" text="Fitxer">
+                            <items>
+                                <MenuItem fx:id="menueItemSortir" mnemonicParsing="false" onAction="#onClick_menueItemSortir" text="Sortir" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menueEditar" mnemonicParsing="false" text="Editar">
+                            <items>
+                                <MenuItem fx:id="menueItemCopiar" mnemonicParsing="false" onAction="#onCopy" text="Copiar" />
+                                <MenuItem fx:id="menueItemTallar" mnemonicParsing="false" onAction="#onCut" text="Tallar" />
+                                <MenuItem fx:id="menueItemEngaxar" mnemonicParsing="false" onAction="#onPaste" text="Enganxar" />
+                                <MenuItem fx:id="menueItemDesfer" mnemonicParsing="false" onAction="#onUndo" text="Desfer" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menueOpcions" mnemonicParsing="false" text="Opcions">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Font">
+                          <items>
+                            <MenuItem fx:id="menuItemArial" mnemonicParsing="false" onAction="#onChangeFont" text="Arial" />
+                              <MenuItem fx:id="menuItemPerpetua" mnemonicParsing="false" onAction="#onChangeFont" text="Perpetua" />
+                              <MenuItem fx:id="menuItemMagneto" mnemonicParsing="false" onAction="#onChangeFont" text="Magneto" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tamany">
+                          <items>
+                            <MenuItem fx:id="menuItemSmall" mnemonicParsing="false" onAction="#onChangeSize" text="10" />
+                              <MenuItem fx:id="menuItemDefault" mnemonicParsing="false" onAction="#onChangeSize" text="12" />
+                              <MenuItem fx:id="menuItemLarge" mnemonicParsing="false" onAction="#onChangeSize" text="16" />
+                              <MenuItem fx:id="menuItemXLarge" mnemonicParsing="false" onAction="#onChangeSize" text="20" />
+                          </items>
+                        </Menu>
+                     </items></Menu>
+                        <Menu fx:id="menueAjuda" mnemonicParsing="false" text="Ajuda">
+                            <items>
+                                <MenuItem fx:id="menueItemSobreEditor" mnemonicParsing="false" onAction="#about" text="Sobre l'Editor" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <TextArea fx:id="taText" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Label" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
